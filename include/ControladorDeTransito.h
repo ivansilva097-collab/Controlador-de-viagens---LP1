@@ -11,35 +11,34 @@
 
 class ControladorDeTransito {
 private:
-    std::vector<Cidade>     cidades;
-    std::vector<Trajeto>    trajetos;
+    std::vector<Cidade> cidades;
+    std::vector<Trajeto> trajetos;
     std::vector<Transporte> transportes;
     std::vector<Passageiro> passageiros;
-    std::vector<Viagem>     viagens;
+    std::vector<Viagem> viagens;
 
-    int proximoIdCidade     = 1;
-    int proximoIdTrajeto    = 1;
+    int proximoIdCidade = 1;
+    int proximoIdTrajeto = 1;
     int proximoIdTransporte = 1;
     int proximoIdPassageiro = 1;
-    int proximoIdViagem     = 1;
+    int proximoIdViagem = 1;
 
     // Dijkstra — retorna sequência de trajetoIds (melhor caminho por distância)
     std::vector<int> dijkstra(int origemId, int destinoId, TipoTransporte tipoTransporte) const;
 
-    // Helpers
-    Cidade*     buscarCidade(int id);
-    Trajeto*    buscarTrajeto(int id);
+    Cidade* buscarCidade(int id);
+    Trajeto* buscarTrajeto(int id);
     Transporte* buscarTransporte(int id);
     Passageiro* buscarPassageiro(int id);
-    Viagem*     buscarViagem(int id);
+    Viagem* buscarViagem(int id);
 
-    const Cidade*     buscarCidade(int id) const;
-    const Trajeto*    buscarTrajeto(int id) const;
+    const Cidade* buscarCidade(int id) const;
+    const Trajeto* buscarTrajeto(int id) const;
     const Transporte* buscarTransporte(int id) const;
     const Passageiro* buscarPassageiro(int id) const;
-    const Viagem*     buscarViagem(int id) const;
+    const Viagem* buscarViagem(int id) const;
 
-    Cidade*     buscarCidadePorNome(const std::string& nome);
+    Cidade* buscarCidadePorNome(const std::string& nome);
     Transporte* buscarTransportePorNome(const std::string& nome);
 
     std::string formatarLinhaViagem(const Viagem& v, bool comTransporte) const;
