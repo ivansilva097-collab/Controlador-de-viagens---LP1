@@ -26,9 +26,9 @@ public:
     std::vector<Etapa> etapas;
     int etapaAtual;
     StatusViagem status;
-    double tempoTotalHoras;  // tempo acumulado
-    double distPercorrida;   // distância percorrida na etapa atual
-    double tempoDescancado;  // tempo já descansado na etapa atual
+    double tempoTotalHoras; // tempo acumulado
+    double distPercorrida; // distância percorrida na etapa atual
+    double tempoDescancado; // tempo já descansado na etapa atual
 
     Viagem()
         : id(0), transporteId(0), origemId(0), destinoId(0),
