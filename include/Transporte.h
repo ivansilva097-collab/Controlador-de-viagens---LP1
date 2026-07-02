@@ -9,11 +9,11 @@ public:
     std::string nome;
     TipoTransporte tipo;
     int capacidade;
-    double velocidade;       // km/h
-    double distDescanco;     // km entre descansos
-    double tempoDescanco;    // horas de descanso
-    int cidadeAtualId;       // -1 = em viagem
-    int viagemAtualId;       // -1 = sem viagem
+    double velocidade; // km/h
+    double distDescanco; // km entre descansos
+    double tempoDescanco; // horas de descanso
+    int cidadeAtualId; // -1 = em viagem
+    int viagemAtualId; // -1 = sem viagem
 
     Transporte()
         : id(0), nome(""), tipo(TipoTransporte::TERRESTRE),
