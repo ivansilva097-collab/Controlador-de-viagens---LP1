@@ -11,8 +11,8 @@ int Viagem::cidadeAtual() const {
 std::string Viagem::statusStr() const {
     switch (status) {
         case StatusViagem::EM_ANDAMENTO: return "EM_ANDAMENTO";
-        case StatusViagem::CONCLUIDA:    return "CONCLUIDA";
-        case StatusViagem::AGUARDANDO:   return "AGUARDANDO";
+        case StatusViagem::CONCLUIDA: return "CONCLUIDA";
+        case StatusViagem::AGUARDANDO: return "AGUARDANDO";
     }
     return "DESCONHECIDO";
 }
