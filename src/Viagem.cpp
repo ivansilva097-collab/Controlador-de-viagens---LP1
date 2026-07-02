@@ -58,9 +58,9 @@ Viagem Viagem::desserializar(const std::string& linha) {
     std::getline(ss, token, '|'); v.destinoId = std::stoi(token);
     std::getline(ss, token, '|'); v.etapaAtual = std::stoi(token);
     std::getline(ss, token, '|');
-    if      (token == "EM_ANDAMENTO") v.status = StatusViagem::EM_ANDAMENTO;
-    else if (token == "CONCLUIDA")    v.status = StatusViagem::CONCLUIDA;
-    else                              v.status = StatusViagem::AGUARDANDO;
+    if (token == "EM_ANDAMENTO") v.status = StatusViagem::EM_ANDAMENTO;
+    else if (token == "CONCLUIDA") v.status = StatusViagem::CONCLUIDA;
+    else v.status = StatusViagem::AGUARDANDO;
     std::getline(ss, token, '|'); v.tempoTotalHoras = std::stod(token);
     std::getline(ss, token, '|'); v.distPercorrida  = std::stod(token);
     std::getline(ss, token, '|'); v.tempoDescancado = std::stod(token);
@@ -89,7 +89,7 @@ Viagem Viagem::desserializar(const std::string& linha) {
             std::getline(ef, f, ':'); e.origemId  = std::stoi(f);
             std::getline(ef, f, ':'); e.destinoId = std::stoi(f);
             std::getline(ef, f, ':'); e.distancia = std::stod(f);
-            std::getline(ef, f);     e.concluida  = (f == "1");
+            std::getline(ef, f); e.concluida  = (f == "1");
             v.etapas.push_back(e);
         }
     }
