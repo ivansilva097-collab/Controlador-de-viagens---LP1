@@ -166,7 +166,6 @@ void menuConsultas() {
 
 int main() {
     std::cout << "CVS - Controlador de Viagens";
-
     // tenta carregar dados salvos
     ctrl.carregar(DATA_DIR);
 
